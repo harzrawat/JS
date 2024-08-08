@@ -1,0 +1,23 @@
+body{
+    
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    border: yellow solid 2px;
+    min-width: 100px;
+    max-height: 30px;
+    border-radius: 10px;
+    color: yellow;
+    font-weight: 900;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+
+}
+

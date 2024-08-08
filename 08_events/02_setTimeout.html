@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>setTimeout</h1>
+    <p></p>
+    <p></p>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const paras = document.querySelectorAll('p')
+    const para1 = setTimeout(()=>{
+        paras[0].innerHTML = `This is 1st statement at ${new Date().toLocaleTimeString()}`
+    },3000)
+    const para2 = setTimeout(()=>{
+        paras[1].innerHTML = `This is 2nd statement at ${new Date().toLocaleTimeString()}`
+    },3000)
+
+    document.getElementById('stop').addEventListener('click',()=>{
+        clearTimeout(para1)
+        console.log("stopped");
+    })
+    
+</script>
+</html>

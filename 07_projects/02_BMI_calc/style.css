@@ -1,0 +1,39 @@
+body{
+    height: 100vh;
+    /*width: 100vw; */
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"]{
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    background: rgb(218, 175, 127);
+}
+
+input[type="submit"]{
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    color: rgb(215, 230, 17);
+    font-weight: 800;
+    background-color: blue;
+    transform: translate(50px,10px);
+}
+
+.try{
+    background-color: green;
+    width: auto;
+    height: 30px;
+    border-radius: 10px;
+}

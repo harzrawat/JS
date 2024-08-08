@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+    // adding new list elements with different and optimised way
+    function addlang(langname){
+        const item = document.createElement('li')
+        item.innerText = langname
+        const target = document.querySelector('.language')
+        target.append(item)
+    }
+    addlang('python')
+
+    const addoptlang = (langname) => {
+        const item = document.createElement('li')
+        item.appendChild(document.createTextNode(`${langname}`))
+
+        const target = document.querySelector('.language')
+        target.append(item)
+    }
+
+    addoptlang("Rust")
+
+    // Edit 
+
+    const secondchild = document.querySelector('li:nth-child(2)')
+    // secondchild.innerHTML = "Golang"
+    // secondchild.appendChild(document.createTextNode("Golang"))      // it will not replace but add this text 
+    const newele = document.createElement('li')
+    newele.textContent = "Golang"
+    secondchild.replaceWith(newele)
+
+    // edit
+
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.outerHTML = "<li>Bhai lang</li>"
+
+    // remove
+    const firstchild = document.querySelector('li:first-child')
+    firstchild.remove()
+
+
+</script>
+
+</html>

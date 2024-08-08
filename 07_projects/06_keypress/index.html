@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            color: black;
+            /* font-size: 1.2em;
+            font-weight: 700; */
+            background-color: white;
+            /* text-align: center; */
+            flex-direction: column;
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+        }
+        table, th, td {
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Press the Key and watch me guess it</h2>
+    <div class="popup"><p style="color: red; font-weight: 900; font-size: 1.2em;"></p></div>
+    
+</body>
+<script>
+    // keypress 
+    let dis
+    let keyname = ()=>{
+        document.addEventListener('keydown',(e)=>{
+            console.log("yes");
+            let popup = document.getElementsByClassName('popup')[0].childNodes[0]
+            if (popup.parentNode.style.display === "flex") {
+                clearTimeout(dis)
+            }
+            popup.parentNode.style.display = "flex";
+            popup.innerHTML = e.code;
+            popup.parentNode.appendChild(document.createElement('div'))
+            popup.parentNode.childNodes[1].innerHTML = `
+            <table>
+                <tr>
+                    <th>Key</th>
+                    <th>Key Code</th>
+                    <th>Code</th>
+                </tr>
+                <tr>
+                    
+                    <th>${e.key === ' ' ? "space": e.key}</th>
+                    <th>${e.keyCode}</th>
+                    <th>${e.code}</th>
+                </tr>
+            </table>`
+
+            // used ternary operator above for space key special condition
+
+            console.log(popup.parentNode.childNodes[1])
+            
+            dis = setTimeout(()=>{
+                popup.parentNode.style.display = "none";
+            },3000)
+        })
+    }
+
+    keyname()
+</script>
+</html>

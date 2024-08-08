@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="week">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    // .children, .firstElementChild, .lastElementChild, .parentElement, .nextElementSibling
+    const parent = document.querySelector('.week')
+    // console.log(parent);
+    const childone = parent.firstElementChild
+    // console.log(childone);
+    const childlast = parent.lastElementChild
+    // console.log(childlast);
+    // console.log(childone.parentElement);
+    // console.log(childone.nextElementSibling);
+    console.log(parent.childNodes);
+    // gives : NodeList(11) [text, comment, text, div.day, text, div.day, text, div.day, text, div.day, text]
+</script>
+</html>

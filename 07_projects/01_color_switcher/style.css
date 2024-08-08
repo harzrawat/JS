@@ -1,0 +1,61 @@
+.canvas{
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    margin-bottom: 100px;
+    color: white;
+}
+.container{
+    transform: /*translate(0,-20px) scale(1.2) */ rotate(45deg);
+    /* transform: ; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    gap: 5px;
+}
+.button{
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+    border: white solid 2px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+
+.clicked {
+    border-color: green;
+    transform: scale(0.9);
+}
+
+#gray:hover{
+    background: rgb(129, 129, 129);
+}
+#blue:hover{
+    background: rgb(3, 106, 141);
+}
+#red:hover{
+    background: rgb(245, 89, 89);
+}
+#yellow:hover{
+    background: rgb(199, 199, 103);
+}
+
+#gray{
+    background: rgb(92, 92, 92);
+}
+#blue{
+    background: blue;
+}
+#red{
+    background: red;
+}
+#yellow{
+    background: yellow;
+}

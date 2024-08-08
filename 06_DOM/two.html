@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: black; color: white;">
+    
+</body>
+<script>
+    // object creation, edit, deletion
+    const div1 = document.createElement('div')
+
+    div1.className = "heading"
+    div1.id = Math.round(Math.random()*10+1)
+    div1.setAttribute('title','this is title')
+    // setattributes add any attribute including class and id
+
+    div1.style.backgroundColor = "red";
+    div1.style.borderRadius = "2px"
+
+    // div1.innerHTML = "<i> This is the Title <i>"
+
+        // below 2 will also print <i> as it is
+    // div1.innerText = "<i> This is the inner HTML <i>"
+    // div1.textContent = "<i> This is the inner HTML <i>"
+
+        // another way to add text from textnode ( said to be optimised, not sure )
+    div1.appendChild(document.createTextNode("This is text Node"))
+    //  appendChild() is used to add a new node element as a child to an existing node.
+
+    console.log(div1);
+    document.body.append(div1)
+
+
+
+</script>
+</html>
